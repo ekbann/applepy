@@ -1,7 +1,7 @@
 # applepy
 Apple ][ emulator written in pure Python and Tkinter.
 
-Text-only screen is very fast. Graphics screen is slow as heck but it works. Text screen and graphics screen are rendered on separate windows.
+It is slow as molasses but works great! Text screen uses 'curses' and graphics screen uses 'tkinter' and are rendered on separate windows.
 
 Example Session
 
@@ -9,7 +9,7 @@ Start the emulator with:
 
     python3 a2.py
     
-The emulator will boot but will not do anything without a disk inserted. Enter CLI (command line interface) mode with the '~' key and lets load a binary file at memory location $2000 which is the Hi-Res page 1 followed by a video refresh:
+The emulator will boot but will not do anything without a disk inserted. Enter CLI (command line interface) mode with the '~' key and load a binary file at memory location $2000 (Hi-Res page 1) followed by a video refresh:
 
     bload bin/wc.pic $2000
     hgr1
