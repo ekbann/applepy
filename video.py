@@ -150,17 +150,21 @@ def read_keyboard():
         if ch == ord('~'):   # ASCII 126
             #close()
             #exit()
-            return True
+            return True		# Enter CLI
         elif ch == ord('|'):
             cpu.Pc = memory.loadVector(0xfffc)
         elif ch == ord('\n'):
             ch = ord('\r')
         elif ch == curses.KEY_BACKSPACE or ch == curses.KEY_DC or ch == 127:
             ch = 8      # CTRL-H is 0x88
-        ch = ord(chr(ch).upper())
-        ch = ch | 0x80  # raise STROBE
-        memory.mem[0xc000] = ch
-        #print ("ch=",ch,hex(ch))
+	# The IF statement below is required for situations where GETCH() returns
+	# 	KEY_RESIZE, KEY_BACKSPACE, KEY_LEFT, KEY_UP, etc.
+	# Either we process them above or ignore them below.
+	if ch < 256:
+        	ch = ord(chr(ch).upper())
+        	ch = ch | 0x80  # raise STROBE
+        	memory.mem[0xc000] = ch
+        	#print ("ch=",ch,hex(ch))
         return False
     return False
 
