@@ -1,0 +1,14 @@
+x integrate drive 1/2; CLI "insert"/"disks" command
+x add CLI "bsave"/"bload": binary file
+x add boundary check (>$ffff) on "bload"; No need, it truncates!
+x add CLI "ssave"/"sload": system snapshot
+- add registers to system snapshot
+x add CLI "disassemble"
+x add CLI "eject" disk
+- add CLI "commit": nibble disk image = commit changes
+x add "|" command alias to "reset"
+x check if curses screen lines < 26 for status info
+x add Tk Hi-Res page 1 window
+- add Hi-Res color mode
+- add 16K Language Card
+x add write-protect (disk-image) flag
