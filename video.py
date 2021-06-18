@@ -160,7 +160,7 @@ def read_keyboard():
         # The IF statement below is required for situations where GETCH() returns
         # KEY_RESIZE, KEY_BACKSPACE, KEY_LEFT, KEY_UP, etc.
         # Either we process them above or ignore them below.
-	if ch < 256:
+        if ch < 256:
                 ch = ord(chr(ch).upper())
                 ch = ch | 0x80  # raise STROBE
                 memory.mem[0xc000] = ch
