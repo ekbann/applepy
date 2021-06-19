@@ -22,7 +22,7 @@ Let's go back to the emulator with the 'c' command (for 'continue') and stop the
 
 Stop the execution with CTRL-C. Enter CLI mode and press 'q' to quit the emulator.
 
-Windows
+##Windows
 
 Requires curses package. You can use curses cross-platform (Windows, MacOS, GNU/Linux) if you install manually for Windows or like other package in others.
 
