@@ -1,7 +1,11 @@
 # applepy
 Apple ][ emulator written in pure Python and Tkinter.
 
-It is slow as molasses but works great! Text screen uses 'curses' and graphics screen uses 'tkinter' and are rendered on separate windows.
+It runs slow as molasses with normal CPython, so use PyPy3 for similar speed of a real Apple!
+
+    apt install pypy3 pypy3-tk
+
+The emulator does not implement clock-cycles so it is always running at fullspeed. Text screen uses 'curses' and graphics screen uses 'tkinter' and are rendered on separate windows.
 
 Example Session
 
